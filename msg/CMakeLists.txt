@@ -148,6 +148,9 @@ set(msg_files
 	vtol_vehicle_status.msg
 	wheel_encoders.msg
 	wind_estimate.msg
+	winhye_command.msg # WINHYE: add cmake msg.
+	winhye_gps_heading.msg
+	winhye_gps_position.msg
 	)
 
 if(NOT EXTERNAL_MODULES_LOCATION STREQUAL "")

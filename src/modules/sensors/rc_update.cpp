@@ -330,7 +330,7 @@ RCUpdate::rc_poll(const ParameterHandles &parameter_handles)
 			manual.y = get_rc_value(rc_channels_s::RC_CHANNELS_FUNCTION_ROLL, -1.0, 1.0);
 			manual.x = get_rc_value(rc_channels_s::RC_CHANNELS_FUNCTION_PITCH, -1.0, 1.0);
 			manual.r = get_rc_value(rc_channels_s::RC_CHANNELS_FUNCTION_YAW, -1.0, 1.0);
-			manual.z = get_rc_value(rc_channels_s::RC_CHANNELS_FUNCTION_THROTTLE, 0.0, 1.0);
+			manual.z = get_rc_value(rc_channels_s::RC_CHANNELS_FUNCTION_THROTTLE, -1.0, 1.0);
 			manual.flaps = get_rc_value(rc_channels_s::RC_CHANNELS_FUNCTION_FLAPS, -1.0, 1.0);
 			manual.aux1 = get_rc_value(rc_channels_s::RC_CHANNELS_FUNCTION_AUX_1, -1.0, 1.0);
 			manual.aux2 = get_rc_value(rc_channels_s::RC_CHANNELS_FUNCTION_AUX_2, -1.0, 1.0);
@@ -343,7 +343,7 @@ RCUpdate::rc_poll(const ParameterHandles &parameter_handles)
 			manual.y = math::constrain(_filter_roll.apply(manual.y), -1.f, 1.f);
 			manual.x = math::constrain(_filter_pitch.apply(manual.x), -1.f, 1.f);
 			manual.r = math::constrain(_filter_yaw.apply(manual.r), -1.f, 1.f);
-			manual.z = math::constrain(_filter_throttle.apply(manual.z), 0.f, 1.f);
+			manual.z = math::constrain(_filter_throttle.apply(manual.z), -1.f, 1.f);
 
 			if (_parameters.rc_map_flightmode > 0) {
 				/* number of valid slots */

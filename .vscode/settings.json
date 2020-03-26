@@ -85,7 +85,8 @@
         "githubPullRequests.telemetry.enabled": false,
         "gitlens.advanced.telemetry.enabled": false,
         "files.associations": {
-                "*.jinja": "jinja"
+                "*.jinja": "jinja",
+                "random": "cpp"
         },
         "search.exclude": {
                 "build/**": true
@@ -96,5 +97,9 @@
         "workbench.editor.highlightModifiedTabs": true,
         "workbench.enableExperiments": false,
         "workbench.settings.enableNaturalLanguageSearch": false,
-        "workbench.statusBar.feedback.visible": false
+        "workbench.statusBar.feedback.visible": false,
+        "python.autoComplete.extraPaths": [
+                "/home/winhye/Workspaces/catkin_ws/devel/lib/python2.7/dist-packages",
+                "/opt/ros/melodic/lib/python2.7/dist-packages"
+        ]
 }

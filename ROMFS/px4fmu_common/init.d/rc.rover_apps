@@ -23,3 +23,10 @@ rover_pos_control start
 # Start Land Detector.
 #
 land_detector start rover
+
+#
+# WINHE: addit startup program.
+#
+winhye_name_gps_receiver start /dev/ttyS1
+winhye_command_receiver start /dev/ttyS3
+winhye_speed_controller start

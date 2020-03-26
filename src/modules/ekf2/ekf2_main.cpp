@@ -80,6 +80,9 @@
 
 #include "Utility/PreFlightChecker.hpp"
 
+#include <uORB/topics/winhye_gps_heading.h>
+#include <uORB/topics/winhye_gps_position.h>
+
 // defines used to specify the mask position for use of different accuracy metrics in the GPS blending algorithm
 #define BLEND_MASK_USE_SPD_ACC      1
 #define BLEND_MASK_USE_HPOS_ACC     2

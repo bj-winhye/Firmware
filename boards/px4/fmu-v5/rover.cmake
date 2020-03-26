@@ -60,6 +60,9 @@ px4_add_board(
 		battery_status
 		sensors
 		vmount
+		winhye_name_gps_receiver # WINHYE: add cmake to compile.
+		winhye_command_receiver
+		winhye_speed_controller
 
 	SYSTEMCMDS
 		bl_update
